@@ -11,6 +11,7 @@
             --color-secundario: #ff85a1;
             --fondo: #fff0f3;
             --texto: #590d22;
+            --whatsapp-green: #25d366;
         }
 
         body {
@@ -90,42 +91,19 @@
             margin-top: 0;
         }
 
-        /* Estilo para el Ramo Buchón */
         .ramo-container {
             text-align: center;
             padding: 20px;
-            background: linear-gradient(145deg, #ffffff, #fff0f3);
             border-radius: 20px;
             margin: 20px 0;
             position: relative;
-            overflow: hidden;
         }
 
         .ramo-img {
             width: 100%;
-            max-width: 400px;
+            max-width: 350px;
             border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            transition: transform 0.5s;
-        }
-
-        .ramo-img:hover {
-            transform: scale(1.05);
-        }
-
-        .sparkle {
-            position: absolute;
-            background: white;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            box-shadow: 0 0 10px white;
-            animation: shine 2s infinite;
-        }
-
-        @keyframes shine {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1.5); }
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
         .timeline {
@@ -150,6 +128,28 @@
             display: inline-block;
         }
 
+        /* Estilo Botón WhatsApp */
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.05);
+            background-color: #1ebe57;
+            box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4);
+        }
+
         @media (max-width: 600px) {
             .timeline { grid-template-columns: 1fr; }
         }
@@ -162,21 +162,15 @@
     <div class="container">
         <header>
             <h1>Para Deni ❤️</h1>
-            <p style="font-style: italic; color: #800e13;">Un detalle digital para un sentimiento real</p>
+            <p style="font-style: italic; color: #800e13;">Un detalle para este 14 de febrero</p>
         </header>
 
         <section class="card">
             <h2>Flores para ti</h2>
             <div class="ramo-container">
-                <div class="sparkle" style="top: 20%; left: 30%;"></div>
-                <div class="sparkle" style="top: 40%; left: 70%;"></div>
-                <div class="sparkle" style="top: 60%; left: 20%;"></div>
-                <div class="sparkle" style="top: 80%; left: 80%;"></div>
-                
                 <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?q=80&w=1000&auto=format&fit=crop" alt="Ramo de rosas" class="ramo-img">
-                
                 <p style="margin-top: 20px; font-weight: 500; color: var(--color-principal);">
-                    Aunque estemos lejos, quería que hoy tuvieras las rosas más lindas. 🌹
+                    Porque hoy quería que tuvieras las rosas más lindas. 🌹
                 </p>
             </div>
         </section>
@@ -185,8 +179,7 @@
             <h2>¿Por qué tú?</h2>
             <ul style="list-style: none; padding: 0;">
                 <li>💖 <strong>Tus notificaciones:</strong> Me hacen el día y me encanta hablar contigo.</li>
-                <li>💖 <strong>Tu apoyo:</strong> Gracias por creer en mí, incluso cuando yo dudo.</li>
-                <li>💖 <strong>Tu tiempo:</strong> Valoro cada minuto que me das. Perdón si a veces me quedo sin palabras.</li>
+                <li>💖 <strong>Tu tiempo:</strong> Valoro cada minuto que me das. Perdón si a veces no sé qué decirte.</li>
                 <li>💖 <strong>Simplemente tú:</strong> Me atraes demasiado y quiero que volvamos a conectar.</li>
             </ul>
         </section>
@@ -194,22 +187,26 @@
         <section class="card">
             <h2>Nosotros</h2>
             <div class="timeline">
-                <div class="moment"><strong>El Comienzo:</strong> Gracias por aceptarme en tu vida aquel día.</div>
                 <div class="moment"><strong>Aprendizaje:</strong> Entendí lo feliz que me haces y lo mucho que te extraño.</div>
-                <div class="moment"><strong>Distancia:</strong> Pesa, pero quiero que hagamos más llamadas para sentirnos cerca.</div>
                 <div class="moment"><strong>Compromiso:</strong> Te daré el tiempo y la atención que mereces, sin excusas.</div>
             </div>
         </section>
 
         <section class="card" style="text-align: center;">
             <h2>Mi Promesa</h2>
-            <p>Prometo estar contigo en las buenas y en las malas, sin importar los kilómetros. Estaré ahí cuando lleguen las tormentas. ❤️</p>
+            <p>Prometo estar contigo en las buenas y en las malas, sin importar la distancia. Estaré ahí siempre. ❤️</p>
         </section>
 
         <div class="coupon">
             <p style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: var(--color-principal); margin: 0;">🎟️ Cupón Especial</p>
-            <p style="margin: 10px 0 0;">Válido por un abrazo real infinito cuando por fin nos veamos. <3</p>
+            <p style="margin: 10px 0 0;">Válido por un abrazo real infinito. <3</p>
         </div>
+
+        <br>
+
+        <a href="https://wa.me/528116614635?text=oda%20acepto%20el%20cupon%20de%20abrazos%20infinitos.%20casate%20conmigo%20%20❤️" class="btn-whatsapp" target="_blank">
+            Canjear Cupón por WhatsApp
+        </a>
     </div>
 
     <script>
