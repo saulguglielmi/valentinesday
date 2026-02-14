@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Persona Favorita ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-principal: #ff4d6d;
+            --color-secundario: #ff85a1;
+            --fondo: #fff0f3;
+            --texto: #590d22;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--fondo);
+            color: var(--texto);
+            overflow-x: hidden;
+        }
+
+        /* Corazones animados de fondo */
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -100px;
+            background-color: var(--color-secundario);
+            opacity: 0.6;
+            transform: rotate(-45deg);
+            animation: float 10s infinite ease-in;
+        }
+
+        .heart::before, .heart::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            border-radius: 50%;
+        }
+
+        .heart::before { top: -50%; left: 0; }
+        .heart::after { left: 50%; top: 0; }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(-45deg); opacity: 0; }
+            20% { opacity: 0.6; }
+            100% { transform: translateY(-120vh) rotate(-45deg); opacity: 0; }
+        }
+
+        /* Contenido Principal */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: var(--color-principal);
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            padding: 0 40px;
+            color: #800e13;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(255, 77, 109, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--color-principal);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        li {
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+
+        li::before {
+            content: "💖 ";
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .moment {
+            background: var(--fondo);
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        .footer-msg {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-top: 50px;
+            color: var(--color-principal);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.8rem; }
+            .timeline { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hearts" id="heartContainer"></div>
+
+    <div class="container">
+        <header>
+            <h1>Nuestro Pequeño Infinito</h1>
+            <p class="quote">"En todo el mundo, no hay un corazón para mí como el tuyo. En todo el mundo, no hay amor para ti como el mío."</p>
+        </header>
+
+        <section class="card">
+            <h2>¿Por qué tú?</h2>
+            <ul>
+                <li><strong>Tu risa:</strong> El sonido que arregla cualquier día gris.</li>
+                <li><strong>Tu apoyo:</strong> Creer en mí, incluso cuando yo no lo hago.</li>
+                <li><strong>Nuestra complicidad:</strong> Bromas que solo nosotros entendemos.</li>
+                <li><strong>Tu luz:</strong> Iluminas cada lugar al que llegas.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Nuestra Historia</h2>
+            <div class="timeline">
+                <div class="moment"><strong>El Comienzo:</strong> A veces no me arrepiento de la vez en la cual te envie la solicitud, realmente gracias por aceptarme.</div>
+                <div class="moment"><strong>La Primera Cita:</strong> </div>
+                <div class="moment"><strong>Los Desafíos:</strong> Creciendo juntos en las malas.</div>
+                <div class="moment"><strong>Mi deseo:</strong>Realmente eres una personita que deseo mucho, pero tambien varias veces concuerdo que con la distancia es muy dificil, pero realmente quiero que tu seas la unica persona con la que me quede.</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Mi Promesa</h2>
+            <p>Prometo no solo quererte cuando el sol brille, sino también quedarme a tu lado cuando lleguen las tormentas. Siempre estare en las buenas y en las malas aún la distancia.</p>
+        </section>
+
+        <p class="footer-msg">Te quiero hoy, mañana y siempre.</p>
+    </div>
+
+    <script>
+        function createHeart() {
+            const container = document.getElementById('heartContainer');
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            
+            const size = Math.random() * 20 + 10 + 'px';
+            heart.style.width = size;
+            heart.style.height = size;
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 7 + 's';
+            
+            container.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 10000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
