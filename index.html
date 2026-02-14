@@ -31,6 +31,25 @@
             z-index: -1;
             pointer-events: none;
         }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
         .heart {
             position: absolute;
@@ -155,7 +174,12 @@
             <h1> </h1>
             <p class="quote">" "</p>
         </header>
-
+         <h2>Melodia</h2>
+            <p>Para que la escuches mientras lees esto... </p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FBAnVJhMIBs?si=qadVgBWb1ujCh1Lu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+</section>
         <section class="card">
             <h2>¿Por qué tú?</h2>
             <ul>
@@ -165,7 +189,8 @@
                 <li><strong>Simplemente tu:</strong> realmente me siento muy atraido a ti, y me gustaria que volvieras a sentir lo mismo que yo.</li>
             </ul>
         </section>
-
+        <section class="card">
+   
         <section class="card">
             <h2>Nosotros</h2>
             <div class="timeline">
@@ -207,6 +232,7 @@
     </script>
 </body>
 </html>
+
 
 
 
